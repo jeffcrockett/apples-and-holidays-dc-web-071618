@@ -78,7 +78,7 @@ def all_holidays_with_bbq(holiday_hash)
   supplies = []
   holiday_hash.each do |key, value|
     value.each do |key2, value2|
-      if value2 == "BBQ"
+      if value2.any?{|item| item == "BBQ"}
         supplies += key2
       end
     end
